@@ -3,9 +3,9 @@ import { Text, View, StyleSheet } from 'react-native';
 import { Input } from 'react-native-elements';
 import trackerApi from '../api/tracker';
 
-const VerifyScreen = ({ route,navigation }) => {
+const VerifyScreen = ({ navigation }) => {
     const [state, setState] = useState('')
-    const { email } = route.params;
+    const email = navigation.getParam('email')
     const [errorMessage, setErrorMessage] = useState(null);
 
     // const VerifyEmail = () => {
